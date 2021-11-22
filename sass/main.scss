@@ -19,3 +19,61 @@
 @import "./pages/project";
 
 
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f6f6f6;
+    color:black   
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Shrikhand' , sans-serif;
+}
+
+.ohmyfoodHead {
+    @include flexbox-center;
+    height: 100px;
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    position: relative;
+}
+
+.localisation {
+    @include flexbox-center;
+    font-size: 2em;
+    font-weight: bold;
+    height: 3em;
+    background: #f3f3f3;
+    color: #7a7a7a;
+}
+
+.presentation {
+    @include flexbox-center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 3em;
+    .titrePresentation{
+        width: 10em;
+        text-align: center;
+    }
+    .explicationPresentation{
+        width: 20em;
+        font-size: 0.7em;
+        color: gray;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+}
