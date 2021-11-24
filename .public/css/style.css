@@ -351,11 +351,17 @@ h1, h2, h3, h4, h5 {
   font-size: 2em;
   font-weight: bold;
   height: 3em;
-  background: #f3f3f3;
-  color: #7a7a7a;
+  background: #eaeaea;
+  color: #4f4f4f;
+}
+.localisation .pin {
+  margin-right: 1em;
 }
 
-.presentation {
+.sectionPresentation {
+  background-color: #f6f6f6;
+}
+.sectionPresentation .presentation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,16 +369,45 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
   font-size: 3em;
 }
-.presentation .titrePresentation {
+.sectionPresentation .presentation .titrePresentation {
   width: 10em;
   text-align: center;
 }
-.presentation .explicationPresentation {
+.sectionPresentation .presentation .explicationPresentation {
   width: 20em;
   font-size: 0.7em;
-  color: gray;
+  color: #797979;
   font-weight: normal;
   text-align: center;
+  margin-bottom: 1em;
+}
+.sectionPresentation .presentation .btn {
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 0 20px;
+  padding-bottom: 0.4em;
+  padding-top: 0.4em;
+  border-radius: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9em;
+}
+.sectionPresentation .presentation .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+.sectionPresentation .presentation .btn p {
+  font-size: 0.6em;
+}
+
+.titre {
+  color: black;
+  width: 5em;
 }
 
 /*# sourceMappingURL=style.css.map */
