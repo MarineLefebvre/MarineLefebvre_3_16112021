@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/MarineLefebvre/MarineLefebvre_3_16112021#readme",
   "dependencies": {
-    "autoprefixer": "^10.4.0"
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2"
   }
 }

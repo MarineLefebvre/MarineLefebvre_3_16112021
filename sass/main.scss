@@ -18,6 +18,16 @@
 @import "./pages/about";
 @import "./pages/project";
 
+@font-face {
+    font-family: "Roboto";
+    src: url("/font/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("/font/Shrikhand-Regular.ttf")  format('truetype');
+}
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -29,11 +39,18 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
     align-items: center;
 }
 
+@mixin flexbox-left {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
 @mixin button-hover {
     opacity: 0.8;
     cursor: pointer;
-    transition: .3s;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    transform: scale(1.15); 
 }
 
 @mixin button-style {
@@ -44,19 +61,28 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
     padding-bottom: 0.4em;
     padding-top: 0.4em;
     border-radius: 200px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
 }
 
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", serif;
     margin: 0;
-    background: #f6f6f6;
-    color:black   
+    background: white;
+    color:black;
+    overflow: scroll;   
+}
+
+* a {
+    text-decoration: none;
+    color: white;
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: 'Shrikhand' , sans-serif;
+    font-family: "Shrikhand", serif;
 }
 
 .ohmyfoodHead {
@@ -82,6 +108,7 @@ h1,h2,h3,h4,h5 {
 
 .sectionPresentation{
     background-color: #f6f6f6;
+    padding-bottom: 7em;
     .presentation {
         @include flexbox-center;
         flex-direction: column;
@@ -113,12 +140,143 @@ h1,h2,h3,h4,h5 {
     }
 }
 
-.titre{
-    color: black;
-    width: 5em;
+.sectionFonctionnement{
+    .titre{
+        color: black;
+        font-size: 3em;
+        font-weight: bold;
+        margin-left: 0.5em;
+        margin-top: 1.5em;
+    }
+    .blocEtapesFonctionnement{
+        @include flexbox-center;
+        flex-direction: column;
+        .etapesFonctionnement {
+            @include flexbox-left;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-radius: 50px 50px 50px 50px;
+            box-shadow: 0px 10px 10px 10px #ebebeb;
+            background-color: #f6f6f6;
+            margin-bottom: 1em;
+            height: 4em;
+            width: 90%;
+            margin-top: 1em;
+            .number{
+                background-color: $color-primary;
+                padding-right: 0.5em;
+                padding-left: 0.5em;
+                border-radius: 100%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+            .logoFonctionnement{
+                margin-left: 2em;
+                margin-right: 2em;
+                color: #808080;
+            }
+            &:hover{
+                background-color: #f5edff;
+            }
+        }
+    }
+    
 }
 
+.restaurantTitle{
+    margin-top: 4em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
 
+.blocRestaurant{
+    border-radius: 40px 40px 40px 40px;
+    border: white solid 2px;
+    background-color: white;
+    width: 90%;
+    box-shadow: 6px 6px 5px lightgrey;
+    margin-left: 5%;
+    margin-bottom: 2em;
+    .restaurant{
+        .imgNew{
+            color: green;
+            background-color: lightgreen;
+            width: 16%;
+            font-size: 1.5em;
+            padding: 0.5em;
+            font-weight: bold;
+            border-radius: 10%;
+            position: absolute;
+            transform: translate(430%,50%);
+        }
+        .imageRestaurant{
+            width: 100%;
+            height: 25em;
+            object-fit: cover;
+            border-radius: 40px 40px 0px 0px; 
+        }
+    }
+    .cardRestaurantBottom{
+        @include flexbox-left;
+        .restaurantInfo{
+            width: 85%;
+            font-size: 2.5em;
+            margin-left: 0.5em;
+            .restaurantName{
+                font-weight: bold;
+            }
+        }
+        .restaurantLike{
+            .fa-heart{
+                font-size: 3em;
+            }
+        }
+    }
+    
+}
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    @include flexbox-center;
+    .blocFooter {
+        display: inline;
+        padding: 0 40px;
+        width: 100%;
+        max-width: 1200px;
+        .logo {
+            font-family: "Shrikhand", serif;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+        .linksFooter {
+            display: inline-flex;
+            flex-direction: column;
+            width: auto;
+        }
+        .linkFooter {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            color: white;
+            height: 30px;
+            cursor: pointer;
+            &:hover .titleFooter {
+                text-decoration: underline;
+            }
+            & i {
+             margin-right: 7px;
+            }
+            .titleFooter {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
 
 
 @media screen and (min-width: 800px) {
