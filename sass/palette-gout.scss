@@ -1,0 +1,87 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+
+
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/font/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("/font/Shrikhand-Regular.ttf")  format('truetype');
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-left {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    transform: scale(1.15); 
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+}
+
+
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    background: white;
+    color:black;
+    overflow: scroll;   
+}
+
+* a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: "Shrikhand", serif;
+}
+
