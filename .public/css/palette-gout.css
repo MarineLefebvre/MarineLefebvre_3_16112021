@@ -326,11 +326,11 @@ button {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/font/Roboto-Regular.ttf") format("truetype");
+  src: url("../../font/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url("/font/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../../font/Shrikhand-Regular.ttf") format("truetype");
 }
 body {
   font-family: "Roboto", serif;
@@ -347,6 +347,98 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Shrikhand", serif;
+}
+
+.ohmyfoodHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.restaurantImg {
+  height: 33em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant {
+  position: absolute;
+  transform: translateY(-10%);
+  width: 100%;
+  border-radius: 40px 40px 40px 40px;
+  border: white solid 2px;
+  background-color: white;
+  box-shadow: 6px 6px 5px lightgrey;
+  margin-bottom: 2em;
+}
+.restaurant .nomRestaurant {
+  margin-left: 1.5em;
+}
+.restaurant .blocCarte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.restaurant .blocCarte .entrees {
+  width: 95%;
+}
+.restaurant .blocCarte .entrees .cardPlats {
+  padding-left: 1em;
+  border-radius: 40px 40px 40px 40px;
+  border: white solid 2px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 6px 6px 5px lightgrey;
+  margin-bottom: 2em;
+}
+
+.footer {
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .blocFooter {
+  display: inline;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+.footer .blocFooter .logo {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+.footer .blocFooter .linksFooter {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+}
+.footer .blocFooter .linkFooter {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+.footer .blocFooter .linkFooter:hover .titleFooter {
+  text-decoration: underline;
+}
+.footer .blocFooter .linkFooter i {
+  margin-right: 7px;
+}
+.footer .blocFooter .linkFooter .titleFooter {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=palette-gout.css.map */
