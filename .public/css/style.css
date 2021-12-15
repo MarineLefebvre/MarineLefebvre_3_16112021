@@ -408,6 +408,7 @@ h1, h2, h3, h4, h5 {
   transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,6 +467,9 @@ h1, h2, h3, h4, h5 {
 .sectionFonctionnement .blocEtapesFonctionnement .etapesFonctionnement:hover {
   background-color: #f5edff;
 }
+.sectionFonctionnement .blocEtapesFonctionnement .etapesFonctionnement:hover .fas {
+  color: #9356DC;
+}
 
 .restaurantTitle {
   margin-top: 4em;
@@ -508,16 +512,40 @@ h1, h2, h3, h4, h5 {
   justify-content: left;
   align-items: center;
 }
-.blocRestaurant .cardRestaurantBottom .restaurantInfo {
+.blocRestaurant .cardRestaurantBottom .linkRestaurant {
+  width: 100%;
+}
+.blocRestaurant .cardRestaurantBottom .linkRestaurant .restaurantInfo {
   width: 85%;
   font-size: 2.5em;
   margin-left: 0.5em;
 }
-.blocRestaurant .cardRestaurantBottom .restaurantInfo .restaurantName {
+.blocRestaurant .cardRestaurantBottom .linkRestaurant .restaurantInfo .restaurantName {
   font-weight: bold;
 }
-.blocRestaurant .cardRestaurantBottom .restaurantLike .fa-heart {
+.blocRestaurant .cardRestaurantBottom .restaurantLike .lock {
+  text-decoration: none;
+}
+.blocRestaurant .cardRestaurantBottom .restaurantLike .lock .fa-heart {
   font-size: 3em;
+  margin-right: 24px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0;
+}
+.blocRestaurant .cardRestaurantBottom .restaurantLike .lock .fa-heart-o {
+  color: black;
+  font-size: 3em;
+  margin-right: 24px;
+}
+.blocRestaurant .cardRestaurantBottom .restaurantLike:hover .fa-heart-o,
+.blocRestaurant .cardRestaurantBottom .restaurantLike .lock .fa-heart {
+  display: none;
+}
+.blocRestaurant .cardRestaurantBottom .restaurantLike :hover .fa-heart {
+  display: inline;
 }
 
 .footer {

@@ -359,11 +359,23 @@ h1, h2, h3, h4 {
 
 .titreMenu {
   font-size: 4em;
-  margin-top: 1em;
 }
 
 .typePlat {
   font-size: 3em;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+}
+.typePlat::after {
+  content: "";
+  width: 15%;
+  height: 6px;
+  background: #99E2D0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
 }
 
 .restaurantImg {
@@ -383,9 +395,20 @@ h1, h2, h3, h4 {
 }
 .restaurant .nomRestaurant {
   margin-left: 1.5em;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  display: inline-flex;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  width: 100%;
 }
-.restaurant .nomRestaurant .typePlat {
+.restaurant .nomRestaurant .titreMenu {
+  width: 85%;
+}
+.restaurant .nomRestaurant .fa {
   font-size: 3em;
+  height: max-content;
 }
 .restaurant .blocCarte {
   display: flex;
@@ -398,6 +421,7 @@ h1, h2, h3, h4 {
 }
 .restaurant .blocCarte .entrees .typePlat {
   font-size: 3em;
+  margin-bottom: 1em;
 }
 .restaurant .blocCarte .entrees .cardPlats {
   padding-left: 1em;
@@ -405,15 +429,64 @@ h1, h2, h3, h4 {
   border: white solid 2px;
   background-color: white;
   width: 100%;
-  height: 8em;
+  height: 10em;
   box-shadow: 6px 6px 5px lightgrey;
   margin-bottom: 2em;
 }
-.restaurant .blocCarte .entrees .cardPlats .titreMenu {
+.restaurant .blocCarte .entrees .cardPlats .descriptionPlat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  width: 100%;
+}
+.restaurant .blocCarte .entrees .cardPlats .descriptionPlat .legend {
+  width: 90%;
+  font-size: 2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.restaurant .blocCarte .entrees .cardPlats .descriptionPlat .prix {
+  width: 10%;
   font-size: 2em;
 }
-.restaurant .blocCarte .entrees .cardPlats .legend {
-  font-size: 1.5em;
+.restaurant .blocCarte .entrees .cardPlats .titreMenu {
+  font-size: 2em;
+  font-weight: bold;
+}
+.restaurant .blocBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant .blocBtn .btn {
+  opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 0 20px;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-radius: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-top: 2em;
+}
+.restaurant .blocBtn .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  transform: scale(1.15);
+}
+.restaurant .blocBtn .btn p {
+  font-size: 2em;
 }
 
 .footer {
