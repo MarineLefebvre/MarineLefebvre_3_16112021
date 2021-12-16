@@ -539,6 +539,10 @@ h1, h2, h3, h4 {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
+.restaurant .blocCarte .plats .partieCarte #entree4 {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
 .restaurant .blocCarte .plats .partieCarte #plat1 {
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
