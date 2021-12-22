@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr"></html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
     <script src="https://kit.fontawesome.com/73e562196f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href=".public\css\palette-gout.css" type="text/css">
+    <link rel="stylesheet" href=".public/css/palette-gout.css" type="text/css">
     <title>La note Enchantée</title>
 </head>
 <body>
@@ -24,63 +24,71 @@
         <div class="restaurant">
             <div class="nomRestaurant">
                 <h4 class="titreMenu">La note enchantée</h4>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <a href="" class="lock">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
             </div>
 
             <div class="blocCarte">
                 <div class="plats">
                     <p class="typePlat">Entrées</p>
 
-                    <div class="partieCarte">
-                        <div class="cardPlats" id="entree1">
-                            <div class="infosCard">
-                                <h5 class="titreMenu">Ravioles de foie gras </h5>
-                                <div class="descriptionPlat">
-                                    <p class="legend">Accompagnés de leur crème à la truffe</p>
-                                    <p class="prix">25€</p>
+                    <div class="partieCarte" id="partieEntree">
+                        <div class="ligneEntree">
+                            <div class="cardPlats entrees" id="entree1">
+                                <div class="infosCard">
+                                    <h5 class="titreMenu">Ravioles de foie gras </h5>
+                                    <div class="descriptionPlat">
+                                        <p class="legend">Accompagnés de leur crème à la truffe</p>
+                                        <p class="prix">25€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
+
+                            <div class="cardPlats entrees" id="entree2">
+                                <div class="infosCard">
+                                    <h5 class="titreMenu">Caviar osciètre </h5>
+                                    <div class="descriptionPlat">
+                                        <p class="legend">Sur blini à la farine de blé noir</p>
+                                        <p class="prix">35€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
                             </div>
                         </div>
+                    
 
-                        <div class="cardPlats" id="entree2">
-                            <div class="infosCard">
-                                <h5 class="titreMenu">Caviar osciètre </h5>
-                                <div class="descriptionPlat">
-                                    <p class="legend">Sur blini à la farine de blé noir</p>
-                                    <p class="prix">35€</p>
+                        <div class="ligneEntree">
+                            <div class="cardPlats entrees" id="entree3">
+                                <div class="infosCard">
+                                    <h5 class="titreMenu">Homard et espuma de potiron</h5>
+                                    <div class="descriptionPlat">
+                                        <p class="legend">Mariné aux zestes d'orange</p>
+                                        <p class="prix">20€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
 
-                        <div class="cardPlats" id="entree3">
-                            <div class="infosCard">
-                                <h5 class="titreMenu">Homard et espuma de potiron</h5>
-                                <div class="descriptionPlat">
-                                    <p class="legend">Mariné aux zestes d'orange</p>
-                                    <p class="prix">20€</p>
+                            <div class="cardPlats entrees" id="entree4">
+                                <div class="infosCard">
+                                    <h5 class="titreMenu">Foie gras de canard cuit entier</h5>
+                                    <div class="descriptionPlat">
+                                        <p class="legend">Confiture de figue et pain toasté</p>
+                                        <p class="prix">35€</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-
-                        <div class="cardPlats" id="entree4">
-                            <div class="infosCard">
-                                <h5 class="titreMenu">Foie gras de canard cuit entier</h5>
-                                <div class="descriptionPlat">
-                                    <p class="legend">Confiture de figue et pain toasté</p>
-                                    <p class="prix">35€</p>
+                                <div class="check">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
-                            </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
                             </div>
                         </div>
                     </div>

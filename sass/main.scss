@@ -76,6 +76,7 @@ body {
     color:black;
     overflow: scroll;   
 }
+  
 
 * a {
     text-decoration: none;
@@ -91,6 +92,63 @@ h1,h2,h3,h4,h5 {
     height: 100px;
     box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
     position: relative;
+    img{
+        width: 33%;
+    }
+}
+
+.loader {
+    @keyframes loader {
+        0% {
+            visibility: visible;
+            opacity: 0.9;
+        }
+        70% {
+            opacity: 0.9;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    
+    @keyframes loader-bloc {
+        0% {
+            visibility: visible;
+            opacity: 1;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    animation: loader 2s linear ;
+    visibility: hidden;
+    .loaderBloc {
+        @include flexbox-center;
+        border: 10px solid transparent;
+        border-top: 10px solid $color-primary;
+        border-bottom: 10px solid $color-primary;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        animation: loader-bloc 2s linear ;
+        z-index: 10;
+        visibility: hidden;
+    }
 }
 
 .localisation {
@@ -118,6 +176,8 @@ h1,h2,h3,h4,h5 {
         .titrePresentation{
             width: 10em;
             text-align: center;
+            font-size: 1em;
+            font-weight: bold;
         }
         .explicationPresentation{
             width: 20em;
@@ -191,6 +251,8 @@ h1,h2,h3,h4,h5 {
     margin-top: 4em;
     margin-bottom: 1em;
     margin-left: 1em;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .linkRestaurant{
@@ -199,8 +261,7 @@ h1,h2,h3,h4,h5 {
 
 .blocRestaurant{
     border-radius: 40px 40px 40px 40px;
-    border: white solid 2px;
-    background-color: white;
+    border: solid 2px white;
     width: 90%;
     box-shadow: 6px 6px 5px lightgrey;
     margin-left: 5%;
@@ -279,7 +340,7 @@ h1,h2,h3,h4,h5 {
         .logo {
             font-family: "Shrikhand", serif;
             color: white;
-            font-size: 40px;
+            font-size: 50px;
             font-weight: bold;
             padding: 15px 0;
         }
@@ -303,7 +364,8 @@ h1,h2,h3,h4,h5 {
              margin-right: 7px;
             }
             .titleFooter {
-                font-size: 16px;
+                font-size: 26px;
+                margin-bottom: 7px;
                 font-weight: 400;
             }
         }
@@ -311,5 +373,56 @@ h1,h2,h3,h4,h5 {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
+    .sectionPresentation{
+        .presentation {
+            .titrePresentation{
+                width: 90%;
+            }
+            .explicationPresentation{
+                width: 90%;
+            }
+        }
+    }
+
+    .sectionFonctionnement{
+        .titre{
+            color: black;
+            font-size: 3em;
+            font-weight: bold;
+            margin-left: 0.5em;
+            margin-top: 0.5em;
+        }
+        .blocEtapesFonctionnement{
+            @include flexbox-center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .etapesFonctionnement {
+                @include flexbox-left;
+                font-size: 1.5em;
+                width: 28%;
+            }
+        }
+        
+    }
+
+    .restaurantTitle{
+        margin-top: 1em;
+    }
+
+    .ligneCards{
+        @include flexbox-center;
+        width: 100%;
+        justify-content: space-evenly;
+        .blocRestaurant{
+            margin-left: 0;
+            width: 45%;
+            .restaurant{
+                .imgNew{
+                    width: 8.75%;
+                    transform: translate(400%,50%);
+                }
+            }
+        }
+    }
 }
