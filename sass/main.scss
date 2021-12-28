@@ -85,6 +85,7 @@ body {
 
 h1,h2,h3,h4,h5 {
     font-family: "Shrikhand", serif;
+    font-weight: bold;
 }
 
 .ohmyfoodHead {
@@ -255,10 +256,6 @@ h1,h2,h3,h4,h5 {
     font-weight: bold;
 }
 
-.linkRestaurant{
-    color: black;
-}
-
 .blocRestaurant{
     border-radius: 40px 40px 40px 40px;
     border: solid 2px white;
@@ -270,13 +267,14 @@ h1,h2,h3,h4,h5 {
         .imgNew{
             color: green;
             background-color: lightgreen;
-            width: 16%;
+            width: max-content;
+            padding: 0.5em;
             font-size: 1.5em;
             padding: 0.5em;
             font-weight: bold;
             border-radius: 10%;
             position: absolute;
-            transform: translate(430%,50%);
+            transform: translate(450%,50%);
         }
         .imageRestaurant{
             width: 100%;
@@ -287,12 +285,12 @@ h1,h2,h3,h4,h5 {
     }
     .cardRestaurantBottom{
         @include flexbox-left;
-        .linkRestaurant{
-            width: 100%;
-            .restaurantInfo{
-                width: 85%;
-                font-size: 2.5em;
-                margin-left: 0.5em;
+        .restaurantInfo{
+            width: 85%;
+            font-size: 2.5em;
+            margin-left: 0.5em;
+            .colorBlack{
+                color: black;
                 .restaurantName{
                     font-weight: bold;
                 }
@@ -305,7 +303,7 @@ h1,h2,h3,h4,h5 {
                     font-size: 3em;
                     margin-right: 24px;
                     background: $gradient;
-                    background-clip: text;
+                    background-clip: padding-box;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     -webkit-text-stroke: 0;
@@ -373,7 +371,7 @@ h1,h2,h3,h4,h5 {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
     .sectionPresentation{
         .presentation {
             .titrePresentation{
@@ -419,10 +417,48 @@ h1,h2,h3,h4,h5 {
             width: 45%;
             .restaurant{
                 .imgNew{
-                    width: 8.75%;
                     transform: translate(400%,50%);
                 }
             }
         }
+    }
+
+    @media screen and (min-width: 1850px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(450%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 2000px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(500%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 2200px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(550%,50%);
+                    }
+                }
+            }
+        }
+        
     }
 }

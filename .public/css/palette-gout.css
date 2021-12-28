@@ -425,7 +425,7 @@ h1, h2, h3, h4 {
 }
 .menu .restaurant .nomRestaurant .lock .fa-heart {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
+  background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0;
@@ -465,7 +465,6 @@ h1, h2, h3, h4 {
 }
 .menu .restaurant .blocCarte .plats .partieCarte .cardPlats {
   animation: opacity 1s both;
-  -webkit-animation: opacity 1s both;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -553,43 +552,33 @@ h1, h2, h3, h4 {
 }
 .menu .restaurant .blocCarte .plats .partieCarte #entree1 {
   animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #entree2 {
   animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #entree3 {
   animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #entree4 {
   animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #plat1 {
   animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #plat2 {
   animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #plat3 {
   animation-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #desert1 {
   animation-delay: 0.7s;
-  -webkit-animation-delay: 0.7s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #desert2 {
   animation-delay: 0.8s;
-  -webkit-animation-delay: 0.8s;
 }
 .menu .restaurant .blocCarte .plats .partieCarte #desert3 {
   animation-delay: 0.9s;
-  -webkit-animation-delay: 0.9s;
 }
 .menu .restaurant .blocBtn {
   display: flex;
@@ -671,7 +660,7 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
   .menu .restaurant .blocCarte .plats .partieCarte {
     flex-direction: row;
     justify-content: space-evenly;
@@ -701,6 +690,17 @@ h1, h2, h3, h4 {
   }
   .menu .restaurant .blocCarte .plats #PartieEntree .ligneEntree {
     width: 50%;
+  }
+}
+@media screen and (min-width: 1050px) and (max-width: 1400px) {
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .legend {
+    font-size: 13px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .prix {
+    font-size: 13px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .titreMenu {
+    font-size: 20px;
   }
 }
 

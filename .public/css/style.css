@@ -347,6 +347,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Shrikhand", serif;
+  font-weight: bold;
 }
 
 .ohmyfoodHead {
@@ -545,10 +546,6 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-.linkRestaurant {
-  color: black;
-}
-
 .blocRestaurant {
   border-radius: 40px 40px 40px 40px;
   border: solid 2px white;
@@ -560,13 +557,14 @@ h1, h2, h3, h4, h5 {
 .blocRestaurant .restaurant .imgNew {
   color: green;
   background-color: lightgreen;
-  width: 16%;
+  width: max-content;
+  padding: 0.5em;
   font-size: 1.5em;
   padding: 0.5em;
   font-weight: bold;
   border-radius: 10%;
   position: absolute;
-  transform: translate(430%, 50%);
+  transform: translate(450%, 50%);
 }
 .blocRestaurant .restaurant .imageRestaurant {
   width: 100%;
@@ -579,15 +577,15 @@ h1, h2, h3, h4, h5 {
   justify-content: left;
   align-items: center;
 }
-.blocRestaurant .cardRestaurantBottom .linkRestaurant {
-  width: 100%;
-}
-.blocRestaurant .cardRestaurantBottom .linkRestaurant .restaurantInfo {
+.blocRestaurant .cardRestaurantBottom .restaurantInfo {
   width: 85%;
   font-size: 2.5em;
   margin-left: 0.5em;
 }
-.blocRestaurant .cardRestaurantBottom .linkRestaurant .restaurantInfo .restaurantName {
+.blocRestaurant .cardRestaurantBottom .restaurantInfo .colorBlack {
+  color: black;
+}
+.blocRestaurant .cardRestaurantBottom .restaurantInfo .colorBlack .restaurantName {
   font-weight: bold;
 }
 .blocRestaurant .cardRestaurantBottom .restaurantLike .lock {
@@ -597,7 +595,7 @@ h1, h2, h3, h4, h5 {
   font-size: 3em;
   margin-right: 24px;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
+  background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0;
@@ -661,7 +659,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
   .sectionPresentation .presentation .titrePresentation {
     width: 90%;
   }
@@ -707,8 +705,22 @@ h1, h2, h3, h4, h5 {
     width: 45%;
   }
   .ligneCards .blocRestaurant .restaurant .imgNew {
-    width: 8.75%;
     transform: translate(400%, 50%);
+  }
+}
+@media screen and (min-width: 1050px) and (min-width: 1850px) {
+  .ligneCards .blocRestaurant .restaurant .imgNew {
+    transform: translate(450%, 50%);
+  }
+}
+@media screen and (min-width: 1050px) and (min-width: 2000px) {
+  .ligneCards .blocRestaurant .restaurant .imgNew {
+    transform: translate(500%, 50%);
+  }
+}
+@media screen and (min-width: 1050px) and (min-width: 2200px) {
+  .ligneCards .blocRestaurant .restaurant .imgNew {
+    transform: translate(550%, 50%);
   }
 }
 
