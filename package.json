@@ -4,7 +4,9 @@
   "description": "CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this class we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css",
+    "prefix": "postcss .public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+    "sass2": "sass --watch ./sass/palette-gout.scss:.public/css/palette-gout.css"
   },
   "repository": {
     "type": "git",
@@ -12,8 +14,14 @@
   },
   "author": "Marine Lefebvre",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/MarineLefebvre/MarineLefebvre_3_16112021/issues"
   },
-  "homepage": "https://github.com/MarineLefebvre/MarineLefebvre_3_16112021#readme"
+  "homepage": "https://github.com/MarineLefebvre/MarineLefebvre_3_16112021#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2"
+  }
 }

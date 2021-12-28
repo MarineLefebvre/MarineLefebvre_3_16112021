@@ -1,0 +1,453 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+
+
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../font/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../../font/Shrikhand-Regular.ttf")  format('truetype');
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-left {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    transform: scale(1.15); 
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    border: none;
+}
+
+
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    background: white;
+    color:black;
+}
+
+* a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Shrikhand", serif;
+}
+
+.ohmyfoodHead {
+    @include flexbox-left;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    position: relative;
+    a {
+        width: 33%;
+        .fas{
+            width: 33%;
+            margin-left: 1em;
+            color: black;
+            font-size: 2.5em;
+        }
+    }
+    img{
+        width: 33%;
+    }
+}
+
+
+
+.titreMenu{
+    font-size: 4em;
+}
+
+.typePlat{
+    font-size: 3em;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 400;
+    &::after {
+        content: '';
+        width: 15%;
+        height: 6px;
+        background: $color-tertiary;
+        position: absolute;
+        z-index: 20;
+        left: 0px;
+        bottom: -8px;
+    }
+}
+
+.restaurantImg{
+    height: 33em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    background-color: #f6f6f6;
+    .restaurant{
+        transform: translateY(-10%);
+        width: 100%;
+        border-radius: 80px 80px 80px 80px;
+        background-color: #f6f6f6;
+        .nomRestaurant{
+            margin-left: 1.5em;
+            @include flexbox-left;
+            display: inline-flex;
+            margin-top : 3em;
+            margin-bottom: 1em;
+            width: 100%;
+            .titreMenu{
+                width: 85%;
+            }
+            .lock {
+                text-decoration: none;
+                font-size: 3em;
+                .fa-heart {
+                    background: $gradient;
+                    background-clip: padding-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 0;
+                    display : none;
+                } 
+                .fa-heart-o {
+                    color: black;
+                }
+                &:hover .fa-heart{
+                    display: block;
+                }
+                &:hover .fa-heart-o{
+                    display: none;
+                }
+            }
+        }
+        .blocCarte{
+            @include flexbox-center;
+            flex-direction: column;
+            .plats{
+                width: 95%;
+                .typePlat{
+                    font-size: 3em;
+                    margin-bottom: 1em;
+                }
+                .partieCarte{
+                    width: 100%;
+                    @include flexbox-center;
+                    flex-direction: column;
+                    .ligneEntree{
+                        width: 100%;
+                    }
+                    .cardPlats{
+                        @keyframes opacity {
+                            0% {
+                                      opacity: 0;
+                            }
+                            100% {
+                                      opacity: 1;
+                            }
+                        }
+                        animation: opacity 1s both;
+                        @include flexbox-left;
+                        padding-left: 1em;
+                        border-radius: 40px 40px 40px 40px;
+                        border: white solid 2px;
+                        width: 99%;
+                        height: 8em;
+                        box-shadow: 6px 6px 5px lightgrey;
+                        margin-bottom: 2em;
+                        .infosCard{
+                            width: 99%;
+                            .descriptionPlat{
+                                @include flexbox-center;
+                                display: inline-flex;
+                                width: 100%;
+                                .legend{
+                                    width: 90%;
+                                    font-size: 2em;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                }
+                                .prix{
+                                    width: 10%;
+                                    font-size: 2em;
+                                    margin-right: 1em;
+                                }
+                            }
+                            .titreMenu{
+                                font-size: 2em;
+                                font-weight: bold;
+                            }
+                        }
+                        .check{
+                            transform-origin: right;
+                            background-color: $color-tertiary;
+                            height: 102%;
+                            width: 18%;
+                            border-radius: 0px 40px 40px 0px;
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            .fas{
+                                color: white;
+                                font-size: 3em;
+                            }
+                        }
+                        &:hover .infosCard{
+                            width: 85%;
+                        }
+                        &:hover .check{
+                            @keyframes slide-left {
+                                0% {
+                                    transform: scaleX(0);
+                                }
+                                100% {
+                                    transform: scaleX(1);
+                                }
+                              }
+                            display: flex;
+                            animation: slide-left 1s;
+                        }
+                        &:hover .check>.fas{
+                            @keyframes rotate {
+                                0% {
+                                    transform: rotate(0);
+                                }
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                            animation: rotate 1s;
+                        }
+                    }
+                    #entree1{
+                        animation-delay: 0.1s;
+                    }
+                    #entree2{
+                        animation-delay: 0.2s;
+                    }
+                    #entree3{
+                        animation-delay: 0.3s;
+                    }
+    
+                    #entree4{
+                        animation-delay: 0.3s;
+                    }
+    
+                    #plat1{
+                        animation-delay: 0.4s;
+                    }
+                    #plat2{
+                        animation-delay: 0.5s;
+                    }
+                    #plat3{
+                        animation-delay: 0.6s;
+                    }
+                    #desert1{
+                        animation-delay: 0.7s;
+                    }
+                    #desert2{
+                        animation-delay: 0.8s;
+    
+                    }
+                    #desert3{
+                        animation-delay: 0.9s;
+                    }
+                }
+                
+            }
+        }
+        .blocBtn{ 
+            @include flexbox-center;
+            .btn{
+                @include button-style;
+                @include flexbox-center;
+                width: 40%;
+                margin-top: 2em;
+                &:hover {
+                    @include button-hover;
+                }
+                p{
+                    font-size: 2em;
+                }
+            }
+        }
+        
+    }
+}
+
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    @include flexbox-center;
+    .blocFooter {
+        display: inline;
+        padding: 0 40px;
+        width: 100%;
+        max-width: 1200px;
+        .logo {
+            font-family: "Shrikhand", serif;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+        .linksFooter {
+            display: inline-flex;
+            flex-direction: column;
+            width: auto;
+        }
+        .linkFooter {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            color: white;
+            height: 30px;
+            cursor: pointer;
+            &:hover .titleFooter {
+                text-decoration: underline;
+            }
+            & i {
+             margin-right: 7px;
+            }
+            .titleFooter {
+                font-size: 26px;
+                margin-bottom: 7px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 1050px) {
+    
+    .menu{
+        .restaurant{
+            .blocCarte{
+                .plats{
+                    .partieCarte{
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        .ligneEntree{
+                            width: 100%;
+                        }
+                        .cardPlats{
+                            width: 30%;
+                            height: 5em;
+                            .infosCard{
+                                .descriptionPlat{
+                                    .legend{
+                                        font-size: 15px;
+                                    }
+                                    .prix{
+                                        font-size: 15px;
+                                    }
+                                }
+                                .titreMenu{
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                        .entrees {
+                            width: 95%;
+                        }
+                    }
+                    #PartieEntree{
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        .ligneEntree{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1400px) {
+        .menu{
+            .restaurant{
+                .blocCarte{
+                    .plats{
+                        .partieCarte{
+                            .cardPlats{
+                                .infosCard{
+                                    .descriptionPlat{
+                                        .legend{
+                                            font-size: 13px;
+                                        }
+                                        .prix{
+                                            font-size: 13px;
+                                        }
+                                    }
+                                    .titreMenu{
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+

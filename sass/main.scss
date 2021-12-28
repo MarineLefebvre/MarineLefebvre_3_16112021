@@ -18,4 +18,447 @@
 @import "./pages/about";
 @import "./pages/project";
 
+@font-face {
+    font-family: "Roboto";
+    src: url("../../font/Roboto-Regular.ttf") format('truetype');
+}
 
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../../font/Shrikhand-Regular.ttf")  format('truetype');
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-left {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    transform: scale(1.15); 
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    border: none;
+}
+
+
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    background: white;
+    color:black;
+    overflow: scroll;   
+}
+  
+
+* a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: "Shrikhand", serif;
+    font-weight: bold;
+}
+
+.ohmyfoodHead {
+    @include flexbox-center;
+    height: 100px;
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    position: relative;
+    img{
+        width: 33%;
+    }
+}
+
+.loader {
+    @keyframes loader {
+        0% {
+            visibility: visible;
+            opacity: 0.9;
+        }
+        70% {
+            opacity: 0.9;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    
+    @keyframes loader-bloc {
+        0% {
+            visibility: visible;
+            opacity: 1;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    animation: loader 2s linear ;
+    visibility: hidden;
+    .loaderBloc {
+        @include flexbox-center;
+        border: 10px solid transparent;
+        border-top: 10px solid $color-primary;
+        border-bottom: 10px solid $color-primary;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        animation: loader-bloc 2s linear ;
+        z-index: 10;
+        visibility: hidden;
+    }
+}
+
+.localisation {
+    @include flexbox-center;
+    font-size: 2em;
+    font-weight: bold;
+    height: 3em;
+    background: #eaeaea;
+    color: #4f4f4f;
+    .pin {
+        margin-right: 1em
+    }
+}
+
+
+
+.sectionPresentation{
+    background-color: #f6f6f6;
+    padding-bottom: 7em;
+    .presentation {
+        @include flexbox-center;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 3em;
+        .titrePresentation{
+            width: 10em;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .explicationPresentation{
+            width: 20em;
+            font-size: 0.7em;
+            color: #797979;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .btn{
+            @include button-style;
+            @include flexbox-center;
+            width: 9em;
+            &:hover {
+                @include button-hover;
+            }
+            p{
+                font-size: 0.6em;
+            }
+        }
+    }
+}
+
+.sectionFonctionnement{
+    .titre{
+        color: black;
+        font-size: 3em;
+        font-weight: bold;
+        margin-left: 0.5em;
+        margin-top: 1.5em;
+    }
+    .blocEtapesFonctionnement{
+        @include flexbox-center;
+        flex-direction: column;
+        .etapesFonctionnement {
+            @include flexbox-left;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-radius: 50px 50px 50px 50px;
+            box-shadow: 0px 10px 10px 10px #ebebeb;
+            background-color: #f6f6f6;
+            margin-bottom: 1em;
+            height: 4em;
+            width: 90%;
+            margin-top: 1em;
+            .number{
+                background-color: $color-primary;
+                padding-right: 0.5em;
+                padding-left: 0.5em;
+                border-radius: 100%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+            .logoFonctionnement{
+                margin-left: 2em;
+                margin-right: 2em;
+                color: #808080;
+            }
+            &:hover{
+                background-color: #f5edff;
+            }
+            &:hover .fas{
+                color: $color-primary;
+            }
+        }
+    }
+    
+}
+
+.restaurantTitle{
+    margin-top: 4em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.blocRestaurant{
+    border-radius: 40px 40px 40px 40px;
+    border: solid 2px white;
+    width: 90%;
+    box-shadow: 6px 6px 5px lightgrey;
+    margin-left: 5%;
+    margin-bottom: 2em;
+    .restaurant{
+        .imgNew{
+            color: green;
+            background-color: lightgreen;
+            width: max-content;
+            padding: 0.5em;
+            font-size: 1.5em;
+            padding: 0.5em;
+            font-weight: bold;
+            border-radius: 10%;
+            position: absolute;
+            transform: translate(450%,50%);
+        }
+        .imageRestaurant{
+            width: 100%;
+            height: 25em;
+            object-fit: cover;
+            border-radius: 40px 40px 0px 0px; 
+        }
+    }
+    .cardRestaurantBottom{
+        @include flexbox-left;
+        .restaurantInfo{
+            width: 85%;
+            font-size: 2.5em;
+            margin-left: 0.5em;
+            .colorBlack{
+                color: black;
+                .restaurantName{
+                    font-weight: bold;
+                }
+            }
+        }
+        .restaurantLike{
+            .lock {
+                text-decoration: none;
+                .fa-heart {
+                    font-size: 3em;
+                    margin-right: 24px;
+                    background: $gradient;
+                    background-clip: padding-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 0;
+                }
+                .fa-heart-o {
+                    color: black;
+                    font-size: 3em;
+                    margin-right: 24px;
+                }
+            }
+            &:hover .fa-heart-o,
+            .lock .fa-heart {
+              display: none;
+            }
+            :hover .fa-heart {
+                display: inline;
+            }
+        }
+    }
+    
+}
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    @include flexbox-center;
+    .blocFooter {
+        display: inline;
+        padding: 0 40px;
+        width: 100%;
+        max-width: 1200px;
+        .logo {
+            font-family: "Shrikhand", serif;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+        .linksFooter {
+            display: inline-flex;
+            flex-direction: column;
+            width: auto;
+        }
+        .linkFooter {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            color: white;
+            height: 30px;
+            cursor: pointer;
+            &:hover .titleFooter {
+                text-decoration: underline;
+            }
+            & i {
+             margin-right: 7px;
+            }
+            .titleFooter {
+                font-size: 26px;
+                margin-bottom: 7px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1050px) {
+    .sectionPresentation{
+        .presentation {
+            .titrePresentation{
+                width: 90%;
+            }
+            .explicationPresentation{
+                width: 90%;
+            }
+        }
+    }
+
+    .sectionFonctionnement{
+        .titre{
+            color: black;
+            font-size: 3em;
+            font-weight: bold;
+            margin-left: 0.5em;
+            margin-top: 0.5em;
+        }
+        .blocEtapesFonctionnement{
+            @include flexbox-center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .etapesFonctionnement {
+                @include flexbox-left;
+                font-size: 1.5em;
+                width: 28%;
+            }
+        }
+        
+    }
+
+    .restaurantTitle{
+        margin-top: 1em;
+    }
+
+    .ligneCards{
+        @include flexbox-center;
+        width: 100%;
+        justify-content: space-evenly;
+        .blocRestaurant{
+            margin-left: 0;
+            width: 45%;
+            .restaurant{
+                .imgNew{
+                    transform: translate(400%,50%);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1850px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(450%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 2000px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(500%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 2200px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(550%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+}
