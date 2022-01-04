@@ -520,6 +520,7 @@ h1, h2, h3, h4, h5 {
 }
 .sectionFonctionnement .blocEtapesFonctionnement .etapesFonctionnement .number {
   background-color: #9356DC;
+  color: white;
   padding-right: 0.5em;
   padding-left: 0.5em;
   border-radius: 100%;
@@ -560,7 +561,6 @@ h1, h2, h3, h4, h5 {
   width: max-content;
   padding: 0.5em;
   font-size: 1.5em;
-  padding: 0.5em;
   font-weight: bold;
   border-radius: 10%;
   position: absolute;
@@ -685,7 +685,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: left;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: 28%;
   }
 
@@ -705,17 +705,27 @@ h1, h2, h3, h4, h5 {
     width: 45%;
   }
   .ligneCards .blocRestaurant .restaurant .imgNew {
-    transform: translate(400%, 50%);
+    transform: translate(230%, 50%);
   }
 }
-@media screen and (min-width: 1050px) and (min-width: 1850px) {
+@media screen and (min-width: 1050px) and (min-width: 1350px) {
   .ligneCards .blocRestaurant .restaurant .imgNew {
-    transform: translate(450%, 50%);
+    transform: translate(300%, 50%);
+  }
+}
+@media screen and (min-width: 1050px) and (min-width: 1650px) {
+  .ligneCards .blocRestaurant .restaurant .imgNew {
+    transform: translate(370%, 50%);
+  }
+}
+@media screen and (min-width: 1050px) and (min-width: 1800px) {
+  .ligneCards .blocRestaurant .restaurant .imgNew {
+    transform: translate(430%, 50%);
   }
 }
 @media screen and (min-width: 1050px) and (min-width: 2000px) {
   .ligneCards .blocRestaurant .restaurant .imgNew {
-    transform: translate(500%, 50%);
+    transform: translate(480%, 50%);
   }
 }
 @media screen and (min-width: 1050px) and (min-width: 2200px) {
