@@ -703,5 +703,191 @@ h1, h2, h3, h4 {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 650px) {
+  .typePlat {
+    font-size: 2em;
+  }
+
+  .nomRestaurant {
+    width: 95%;
+  }
+  .nomRestaurant .titreMenu {
+    width: 80%;
+  }
+  .nomRestaurant .titreMenu, .nomRestaurant .lock {
+    font-size: 2.5em;
+  }
+
+  .menu .restaurant .blocCarte .plats .typePlat {
+    font-size: 2em;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .legend {
+    font-size: 15px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .prix {
+    font-size: 15px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .titreMenu {
+    font-size: 22px;
+  }
+  .menu .restaurant .blocBtn .btn p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .menu .restaurant .nomRestaurant {
+    width: 90%;
+  }
+  .menu .restaurant .nomRestaurant .titreMenu {
+    width: 86%;
+  }
+
+  .footer .blocFooter .logo {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+  .footer .blocFooter .linkFooter {
+    height: 15px;
+  }
+  .footer .blocFooter .linkFooter .titleFooter {
+    font-size: 6px;
+    margin-bottom: 3px;
+  }
+  .footer .blocFooter .linkFooter i {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .typePlat::after {
+    height: 3px;
+  }
+
+  .restaurantImg {
+    height: 16em;
+  }
+
+  .ohmyfoodHead {
+    height: 50px;
+  }
+  .ohmyfoodHead a .fas {
+    font-size: 1em;
+  }
+
+  .menu .restaurant .nomRestaurant {
+    width: 90%;
+  }
+  .menu .restaurant .nomRestaurant .titreMenu {
+    width: 75%;
+  }
+
+  .typePlat {
+    font-size: 0.75em;
+  }
+
+  .nomRestaurant {
+    width: 80%;
+  }
+  .nomRestaurant .titreMenu {
+    width: 70%;
+  }
+  .nomRestaurant .titreMenu, .nomRestaurant .lock {
+    font-size: 1em;
+  }
+
+  .menu .restaurant {
+    border-radius: 40px 40px 40px 40px;
+  }
+  .menu .restaurant .blocCarte .plats .typePlat {
+    font-size: 0.75em;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats {
+    height: 4em;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .legend {
+    font-size: 7px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .prix {
+    font-size: 7px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .titreMenu {
+    font-size: 13px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .check .fas {
+    font-size: 1em;
+  }
+  .menu .restaurant .blocBtn .btn p {
+    font-size: 0.4em;
+  }
+  .menu .nomRestaurant .lock {
+    font-size: 1em !important;
+  }
+}
+@media screen and (max-width: 170px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .restaurantImg {
+    height: 10em;
+  }
+
+  .ohmyfoodHead {
+    height: 20px;
+  }
+  .ohmyfoodHead a .fas {
+    font-size: 0.8em;
+  }
+
+  .typePlat {
+    font-size: 0.7em;
+  }
+
+  .nomRestaurant {
+    width: 80%;
+  }
+  .nomRestaurant .titreMenu {
+    width: 70%;
+  }
+  .nomRestaurant .titreMenu, .nomRestaurant .lock {
+    font-size: 0.7em;
+  }
+
+  .menu .restaurant .blocCarte .plats .typePlat {
+    font-size: 0.7em;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .legend {
+    font-size: 4px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .descriptionPlat .prix {
+    font-size: 4px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .titreMenu {
+    font-size: 7px;
+  }
+  .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .check .fas {
+    font-size: 0.7em;
+  }
+  .menu .restaurant .blocBtn .btn p {
+    font-size: 0.4em;
+  }
+  .menu .nomRestaurant .lock {
+    font-size: 0.7em !important;
+  }
+
+  .footer .blocFooter .logo {
+    font-size: 18px;
+    padding: 5px 0;
+  }
+  .footer .blocFooter .linkFooter {
+    height: 13px;
+  }
+  .footer .blocFooter .linkFooter .titleFooter {
+    font-size: 5px;
+    margin-bottom: 2px;
+  }
+  .footer .blocFooter .linkFooter i {
+    font-size: 5px;
+  }
+}
 
 /*# sourceMappingURL=palette-gout.css.map */
