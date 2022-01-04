@@ -417,13 +417,46 @@ h1,h2,h3,h4,h5 {
             width: 45%;
             .restaurant{
                 .imgNew{
-                    transform: translate(230%,50%);
+                    transform: translate(200%,50%);
+                }
+            }
+            .cardRestaurantBottom{
+                @include flexbox-left;
+                .restaurantInfo{
+                    font-size: 1.8em;
                 }
             }
         }
     }
 
-    @media screen and (min-width: 1350px) {
+
+    @media screen and (min-width: 1150px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(220%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 1300px) {
+        .ligneCards{
+            .blocRestaurant{
+                .restaurant{
+                    .imgNew{
+                        transform: translate(270%,50%);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 1450px) {
         .ligneCards{
             .blocRestaurant{
                 .restaurant{
@@ -436,12 +469,12 @@ h1,h2,h3,h4,h5 {
         
     }
 
-    @media screen and (min-width: 1650px) {
+    @media screen and (min-width: 1600px) {
         .ligneCards{
             .blocRestaurant{
                 .restaurant{
                     .imgNew{
-                        transform: translate(370%,50%);
+                        transform: translate(350%,50%);
                     }
                 }
             }
@@ -454,7 +487,7 @@ h1,h2,h3,h4,h5 {
             .blocRestaurant{
                 .restaurant{
                     .imgNew{
-                        transform: translate(430%,50%);
+                        transform: translate(390%,50%);
                     }
                 }
             }
@@ -467,7 +500,7 @@ h1,h2,h3,h4,h5 {
             .blocRestaurant{
                 .restaurant{
                     .imgNew{
-                        transform: translate(480%,50%);
+                        transform: translate(470%,50%);
                     }
                 }
             }
@@ -480,11 +513,202 @@ h1,h2,h3,h4,h5 {
             .blocRestaurant{
                 .restaurant{
                     .imgNew{
-                        transform: translate(550%,50%);
+                        transform: translate(530%,50%);
                     }
                 }
             }
         }
         
     }
+}
+
+@media screen and (max-width: 950px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(400%,50%);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 860px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(360%,50%);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 790px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(310%,50%);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 710px) {
+    .sectionPresentation{
+        padding-bottom: 4em;
+        .presentation {
+            font-size: 2em;
+        }
+    }
+
+    .sectionFonctionnement{
+        .titre{
+            font-size: 2em;
+        }
+        .blocEtapesFonctionnement{
+            .etapesFonctionnement {
+                @include flexbox-left;
+                font-size: 1.5em;
+                width: 80%;
+            }
+        }
+        
+    }
+
+    .restaurantTitle{
+        font-size: 2em;
+    }
+
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(260%,50%);
+                }
+            }
+            .cardRestaurantBottom{
+                .restaurantInfo{
+                    font-size: 1.4em;
+                }
+                .restaurantLike{
+                    .lock {
+                        .fa-heart, .fa-heart-o {
+                            font-size: 1.4em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 615px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(230%,50%);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 565px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(200%,50%);
+                }
+            }
+        }
+    }
+    
+    .footer {
+        .blocFooter {
+            .logo {
+                font-size: 30px;
+            }
+            .linkFooter {
+                height: 25px;
+                .titleFooter {
+                    font-size: 17px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(170%,50%);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 465px) {
+    .localisation {
+        font-size: 1em;
+        height: 2em;
+    }
+
+    .sectionPresentation{
+        .presentation {
+            font-size: 1em;
+        }
+    }
+
+    .sectionFonctionnement{
+        .titre{
+            font-size: 1em;
+        }
+        .blocEtapesFonctionnement{
+            .etapesFonctionnement {
+                @include flexbox-left;
+                font-size: 0.8em;
+                width: 70%;
+            }
+        }
+        
+    }
+
+    .restaurantTitle{
+        font-size: 1em;
+    }
+
+    .ligneCards{
+        .blocRestaurant{
+            .restaurant{
+                .imgNew{
+                    transform: translate(120%,50%);
+                }
+            }
+            .cardRestaurantBottom{
+                .restaurantInfo{
+                    font-size: 1em;
+                }
+                .restaurantLike{
+                    .lock {
+                        .fa-heart, .fa-heart-o {
+                            font-size: 1em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }   
 }
