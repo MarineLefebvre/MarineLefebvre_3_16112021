@@ -73,6 +73,7 @@ body {
     margin: 0;
     background: white;
     color:black;
+    overflow-x: hidden;
 }
 
 * a {
@@ -228,6 +229,9 @@ h1,h2,h3,h4 {
                             .titreMenu{
                                 font-size: 2em;
                                 font-weight: bold;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
                             }
                         }
                         .check{

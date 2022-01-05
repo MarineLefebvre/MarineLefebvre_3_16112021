@@ -337,6 +337,7 @@ body {
   margin: 0;
   background: white;
   color: black;
+  overflow-x: hidden;
 }
 
 * a {
@@ -509,6 +510,9 @@ h1, h2, h3, h4 {
 .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .infosCard .titreMenu {
   font-size: 2em;
   font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .restaurant .blocCarte .plats .partieCarte .cardPlats .check {
   transform-origin: right;
