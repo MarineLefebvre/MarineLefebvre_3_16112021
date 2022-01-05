@@ -747,18 +747,18 @@ h1, h2, h3, h4 {
   }
 
   .footer .blocFooter .logo {
-    font-size: 20px;
+    font-size: 23px;
     padding: 5px 0;
   }
   .footer .blocFooter .linkFooter {
     height: 15px;
   }
   .footer .blocFooter .linkFooter .titleFooter {
-    font-size: 6px;
-    margin-bottom: 3px;
+    font-size: 13px;
+    margin-bottom: 4px;
   }
   .footer .blocFooter .linkFooter i {
-    font-size: 6px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -826,6 +826,38 @@ h1, h2, h3, h4 {
     font-size: 1em !important;
   }
 }
+@media screen and (max-width: 262px) {
+  .footer .blocFooter .logo {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .footer .blocFooter .linkFooter {
+    height: 13px;
+  }
+  .footer .blocFooter .linkFooter .titleFooter {
+    font-size: 9px;
+    margin-bottom: 3px;
+  }
+  .footer .blocFooter .linkFooter i {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 215px) {
+  .footer .blocFooter .logo {
+    font-size: 10px;
+    padding: 2px 0;
+  }
+  .footer .blocFooter .linkFooter {
+    height: 13px;
+  }
+  .footer .blocFooter .linkFooter .titleFooter {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+  .footer .blocFooter .linkFooter i {
+    font-size: 6px;
+  }
+}
 @media screen and (max-width: 170px) {
   body {
     font-size: 1rem;
@@ -879,18 +911,18 @@ h1, h2, h3, h4 {
   }
 
   .footer .blocFooter .logo {
-    font-size: 18px;
-    padding: 5px 0;
+    font-size: 8px;
+    padding: 2px 0;
   }
   .footer .blocFooter .linkFooter {
     height: 13px;
   }
   .footer .blocFooter .linkFooter .titleFooter {
-    font-size: 5px;
+    font-size: 4px;
     margin-bottom: 2px;
   }
   .footer .blocFooter .linkFooter i {
-    font-size: 5px;
+    font-size: 4px;
   }
 }
 

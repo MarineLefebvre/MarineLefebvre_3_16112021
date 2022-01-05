@@ -521,17 +521,17 @@ h1,h2,h3,h4 {
     .footer {
         .blocFooter {
             .logo {
-                font-size: 20px;
+                font-size: 23px;
                 padding: 5px 0;
             }
             .linkFooter {
                 height: 15px;
                 .titleFooter {
-                    font-size: 6px;
-                    margin-bottom: 3px;
+                    font-size: 13px;
+                    margin-bottom: 4px;
                 }
                 & i {
-                    font-size: 6px;
+                    font-size: 13px;
                 }
             }
         }
@@ -633,6 +633,49 @@ h1,h2,h3,h4 {
     
 }
 
+@media screen and (max-width: 262px){
+    .footer {
+        .blocFooter {
+            .logo {
+                font-size: 15px;
+                padding: 5px 0;
+            }
+            .linkFooter {
+                height: 13px;
+                .titleFooter {
+                    font-size: 9px;
+                    margin-bottom: 3px;
+                }
+                & i {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 215px){
+    .footer {
+        .blocFooter {
+            .logo {
+                font-size: 10px;
+                padding: 2px 0;
+            }
+            .linkFooter {
+                height: 13px;
+                .titleFooter {
+                    font-size: 6px;
+                    margin-bottom: 2px;
+                }
+                & i {
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+}
+
+
 
 @media screen and (max-width: 170px) {
     body{
@@ -715,17 +758,17 @@ h1,h2,h3,h4 {
     .footer {
         .blocFooter {
             .logo {
-                font-size: 18px;
-                padding: 5px 0;
+                font-size: 8px;
+                padding: 2px 0;
             }
             .linkFooter {
                 height: 13px;
                 .titleFooter {
-                    font-size: 5px;
+                    font-size: 4px;
                     margin-bottom: 2px;
                 }
                 & i {
-                    font-size: 5px;
+                    font-size: 4px;
                 }
             }
         }
